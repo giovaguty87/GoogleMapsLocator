@@ -18,14 +18,24 @@
             var contentString = '<div id="content" style="margin-left:15px;margin-top:3px;overflow:hidden;"><div id="bodyContent">'+
                  	    	'<img src="images/logo.jpg" style="width:172px;height:45px;"alt="WebStreet.in"/>'+'<br><font style="color:darkblue;font:11px tahoma;margin-left:5px;">Gio Gutiérrez Provider</font>'+
 		      	'<br><br><div style="font:13px verdana;color:darkgreen;margin-left:5px;">Street 32 N° 20-10<br>Downtown' +
-			'<br>Manizales Caldas - 170001<br>Colombia<br>+57-3128349299<br>gio.gutierrez@bglobalsolutions.com<br><br>'+
+			'<br>Manizales Caldas - 170001<br>Colombia<br>+57 3128349299<br>gio.gutierrez@bglobalsolutions.com<br><br>'+
      		      	'<a href="/KB/aspnet/ContactForm.aspx" style="color:#00303f;font:bold 12px verdana;" title="click to contact">Contact Form</a></div>' +
                            '</div>'+
-                           '</div>';
+                '</div>';
 
+            var contentString2 = '<div id="content" style="margin-left:15px;margin-top:3px;overflow:hidden;"><div id="bodyContent">' +
+                '<img src="images/logo.jpg" style="width:172px;height:45px;"alt="WebStreet.in"/>' + '<br><font style="color:darkblue;font:11px tahoma;margin-left:5px;">Gio Gutiérrez Developer</font>' +                                                
+                '</div>' +
+                '</div>';
 
             var infowindow = new google.maps.InfoWindow({
                 content: contentString,
+                width: 192,
+                height: 100
+            });
+
+            var infowindow2 = new google.maps.InfoWindow({
+                content: contentString2,
                 width: 192,
                 height: 100
             });
@@ -67,6 +77,10 @@
 
             google.maps.event.addListener(marker1, 'click', function () {
                 infowindow.open(diag, marker1);
+            });
+
+            google.maps.event.addListener(marker2, 'click', function () {
+                infowindow2.open(diag, marker2);
             });
         }
         function getmap() {
