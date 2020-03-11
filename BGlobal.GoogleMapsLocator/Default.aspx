@@ -116,11 +116,17 @@
             return d; // returns the distance in meter
         };       
 
-        google.maps.event.addDomListener(window, 'load', initialize);         
-                       
-    </script>
-    <div id="map_populate" style="width:100%; height:500px; border: 5px solid #5E5454;"></div>       
-    <%--<div>  
-        <input type="button" value="Search" onclick="getmap()">  
-    </div> --%>
+        //google.maps.event.addDomListener(window, 'load', initialize);         
+        $(document).ready(function () {             
+            $('#show-map').on('click', initialize);            
+        });        
+
+    </script>      
+    <div>  
+        <input type="button" id="show-map" value="Load map">  
+    </div> <br>
+    <div>  
+        <label title="Hello"></label>  
+    </div> <br>
+    <div id="map_populate" style="width:100%; height:500px; border: 5px solid #5E5454;"></div>
 </asp:Content>
