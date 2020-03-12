@@ -13,13 +13,17 @@
                       "dialogWidth:255px;dialogHeight:250px");
               } else {
                   window.open('Default.aspx', 'name',
-                      'height=255,width=250,toolbar=no,directories=no,status=no, linemenubar=no,scrollbars=no,resizable=no ,modal=yes');
+                      'height=500,width=900,toolbar=no,directories=no,status=no,linemenubar=no,scrollbars=no,resizable=no ,modal=yes');
               }
           } 
      </script>
     <div>  
         <input type="button" id="show-map" value="Load map" onclick="openWindow();" /> 
-    </div>
+    </div> 
+    <br>
+      <div>
+          <asp:TextBox ID="Comment" TextMode="MultiLine" Columns="50" Rows="5" runat="server" ReadOnly="true"/>
+      </div>
 </asp:Content>
 
 
